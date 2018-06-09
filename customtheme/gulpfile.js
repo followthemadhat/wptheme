@@ -20,7 +20,8 @@ var gulp = require('gulp'),
 gulp.task('browser-sync', function() {
   browserSync.init({
     proxy: 'dev.loc',
-    notify: false
+    notify: false,
+    open: false
   });
   gulp.watch('./sass/**/*', ['styles']);
 });
