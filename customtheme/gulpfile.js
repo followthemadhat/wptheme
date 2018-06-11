@@ -38,7 +38,7 @@ gulp.task('styles', function() {
 
 gulp.task('scripts', function() {
   return gulp.src([
-    './libs/jquery/dist/jquery.min.js'
+    // './libs/jquery/dist/jquery.min.js'
     ])
     .pipe(plumber())
     .pipe(concat('libs.min.js'))

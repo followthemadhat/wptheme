@@ -6,3 +6,18 @@
   left: 50%;
   transform: translate(-50%, -50%);
 }
+
+@mixin wpMenuLinks {
+  .menu-item {
+    &:hover a, &.active a, &.current-menu-item a, &.current-page-item a, &.current-page-ancestor a {
+      color: $secondary;
+      text-decoration: none;
+    }
+  }
+}
+
+@mixin bgimg {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
