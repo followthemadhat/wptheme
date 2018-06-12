@@ -214,3 +214,10 @@ function fw_inline_svg_handling( $response, $attachment, $meta ) {
 	return $response;
 }
 add_filter( 'wp_prepare_attachment_for_js', 'fw_inline_svg_handling', 10, 3 );
+
+// Disable website field on comments form
+function crunchify_disable_comment_url($fields) {
+    unset($fields['url']);
+    return $fields;
+}
+add_filter('comment_form_default_fields','crunchify_disable_comment_url');
