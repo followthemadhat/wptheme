@@ -95,6 +95,10 @@ img {
   display: flex;
 
   flex-wrap: wrap;
+  &::before,
+  &::after {
+    content: normal;
+  }
 }
 
 /* Wordpress related */

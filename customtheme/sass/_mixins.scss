@@ -16,8 +16,8 @@
   }
 }
 
-@mixin bgimg {
-  background-position: top center;
+@mixin bgCover {
+  background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
 }
