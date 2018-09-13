@@ -1,12 +1,29 @@
 #content {
   overflow: hidden;
-  min-height: 100vh;
+  min-height: 90vh;
 }
 
-#main {
-
+#primary {
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+  p {
+    margin-bottom: 15px;
+  }
 }
 
-#aside {
+.post {
+  &-title {
 
+  }
+  &-image {
+
+  }
+  &-date {
+
+  }
+  &-content {
+
+  }
 }

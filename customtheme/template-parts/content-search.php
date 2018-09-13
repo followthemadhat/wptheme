@@ -9,27 +9,24 @@
 
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<header class="entry-header">
-		<?php the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
-
-		<?php if ( 'post' === get_post_type() ) : ?>
-		<div class="entry-meta">
-			<?php
-			customtheme_posted_on();
-			customtheme_posted_by();
-			?>
-		</div><!-- .entry-meta -->
-		<?php endif; ?>
-	</header><!-- .entry-header -->
-
-	<?php customtheme_post_thumbnail(); ?>
-
-	<div class="entry-summary">
-		<?php the_excerpt(); ?>
-	</div><!-- .entry-summary -->
-
-	<footer class="entry-footer">
-		<?php customtheme_entry_footer(); ?>
-	</footer><!-- .entry-footer -->
-</article><!-- #post-<?php the_ID(); ?> -->
+<div class="col-12 col-lg-4">
+	<div class="post">
+		<a href="<?php echo the_permalink(); ?>">
+			<h3 class="post-title"><?php echo the_title(); ?></h3>
+		</a>
+		<div class="post-meta">
+			<span class="post-date"><?php echo get_the_date(); ?></span>
+		</div>
+		<div class="post-image">
+			<?php if (has_post_thumbnail()) : ?>
+				<a href="<?php echo the_permalink(); ?>">
+					<img src="<?php echo get_the_post_thumbnail_url(); ?>" alt="<?php the_title(); ?>">
+				</a>
+			<?php endif; ?>
+		</div>
+		<div class="post-content">
+			<p><?php echo get_the_excerpt(); ?></p>
+			<a href="<?php echo the_permalink(); ?>" class="read-more">Read more >></a>
+		</div>
+	</div>
+</div>

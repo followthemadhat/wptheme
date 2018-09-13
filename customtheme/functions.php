@@ -176,7 +176,7 @@ function img_dir() {
 }
 
 // CUSTOM EXCERPT
-function custom_excerpt_length( $length ) { return 140; }
+function custom_excerpt_length( $length ) { return 55; }
 add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
 function excerpt_read_more($more) { return '...'; }
 add_filter('excerpt_more', 'excerpt_read_more');
