@@ -221,3 +221,6 @@ function crunchify_disable_comment_url($fields) {
     return $fields;
 }
 add_filter('comment_form_default_fields','crunchify_disable_comment_url');
+
+// Hiding Gravity form top labels
+add_filter( 'gform_enable_field_label_visibility_settings', '__return_true' );
