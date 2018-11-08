@@ -9,8 +9,8 @@
 
 @mixin wpMenuLinks {
   .menu-item {
-    &:hover a, &.active a, &.current-menu-item a, &.current-page-item a, &.current-page-ancestor a, &.current_page_parent a {
-      color: $secondary;
+    &:hover > a, &.active > a, &.current-menu-item > a, &.current-page-item > a, &.current-page-ancestor > a, &.current_page_parent > a {
+      color: $primary;
       text-decoration: none;
     }
   }
