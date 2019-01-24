@@ -38,7 +38,9 @@ gulp.task('styles', function() {
 
 gulp.task('scripts', function() {
   return gulp.src([
-    // './libs/slicknav/dist/jquery.slicknav.min.js'
+    './libs/slicknav/dist/jquery.slicknav.min.js',
+    './libs/swiper/dist/js/swiper.min.js',
+    './libs/magnific-popup/dist/jquery.magnific-popup.min.js'
     ])
     .pipe(plumber())
     .pipe(concat('libs.min.js'))
