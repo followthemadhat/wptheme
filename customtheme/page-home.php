@@ -2,7 +2,6 @@
 /**
  * Template Name: Home Page
  *
- * @package customtheme
  */
 
 get_header(); ?>

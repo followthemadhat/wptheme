@@ -4,7 +4,6 @@
  *
  * Eventually, some of the functionality here could be replaced by core features.
  *
- * @package customtheme
  */
 
 if ( ! function_exists( 'customtheme_posted_on' ) ) :

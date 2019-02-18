@@ -2,7 +2,6 @@
 /**
  * customtheme Theme Customizer
  *
- * @package customtheme
  */
 
 /**

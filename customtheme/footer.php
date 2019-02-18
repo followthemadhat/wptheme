@@ -6,7 +6,6 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
- * @package customtheme
  */
 
 ?>
@@ -14,7 +13,7 @@
 	</div><!-- #content -->
 
 	<footer class="main-footer">
-		
+
 	</footer>
 
 <?php wp_footer(); ?>

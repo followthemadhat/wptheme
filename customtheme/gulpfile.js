@@ -19,7 +19,7 @@ var gulp = require('gulp'),
 
 gulp.task('browser-sync', function() {
   browserSync.init({
-    proxy: 'dev.loc',
+    proxy: 'http://localhost:8888/wordpress/'+themeName+'/',
     notify: false,
     open: false
   });
@@ -31,7 +31,7 @@ gulp.task('styles', function() {
     .pipe(sassGlob())
     .pipe(plumber())
     .pipe(sass({outputStyle: 'expanded'}).on('error', sass.logError))
-    .pipe(autoprefixer({ browsers: ['last 15 versions', '> 1%', 'ie 9'], cascade: true }))
+    .pipe(autoprefixer({ browsers: ['last 10 versions', '> 1%', 'ie 10'], cascade: true }))
     .pipe(gulp.dest('./'))
     .pipe(browserSync.reload({stream: true}));
 });
@@ -44,7 +44,6 @@ gulp.task('scripts', function() {
     ])
     .pipe(plumber())
     .pipe(concat('libs.min.js'))
-    // .pipe(uglify())
     .pipe(gulp.dest('./js'));
 });
 
@@ -55,15 +54,14 @@ gulp.task('watch', ['styles', 'scripts', 'browser-sync'], function() {
 });
 
 gulp.task('clean', function() {
-  return del.sync('../'+themeName, {force: true});
+  return del.sync('../'+themeName+'-build', {force: true});
 });
 
 gulp.task('images', function() {
   return gulp.src('img/**/*')
-    .pipe(newer('img/**/*'))
     .pipe(plumber())
     .pipe(imagemin())
-    .pipe(gulp.dest('img/'));
+    .pipe(gulp.dest('../'+themeName+'-build'));
 });
 
 gulp.task('build', ['clean', 'images'], function() {
@@ -79,8 +77,7 @@ gulp.task('build', ['clean', 'images'], function() {
   '!./node_modules',
   '!./node_modules/**'
     ])
-  .pipe(replace('customtheme', themeName, {skipBinary: true}))
-  .pipe(gulp.dest('../'+themeName));
+  .pipe(gulp.dest('../'+themeName+'-build'));
 
 });
 

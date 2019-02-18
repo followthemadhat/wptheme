@@ -4,7 +4,6 @@
  *
  * @link https://developer.wordpress.org/themes/basics/theme-functions/
  *
- * @package customtheme
  */
 
 if ( ! function_exists( 'customtheme_setup' ) ) :
@@ -120,9 +119,11 @@ add_action( 'widgets_init', 'customtheme_widgets_init' );
  * Enqueue scripts and styles.
  */
 function customtheme_scripts() {
-	wp_enqueue_style( 'customtheme-style', get_stylesheet_uri() );
+	wp_enqueue_style( 'wp-styles', get_stylesheet_uri() );
 
 	wp_enqueue_style( 'customtheme-styles', get_stylesheet_directory_uri() . '/main.css' );
+
+	wp_enqueue_style( 'update-styles', get_stylesheet_directory_uri() . '/updates.css' );
 
 	wp_enqueue_script( 'customtheme-navigation', get_template_directory_uri() . '/js/navigation.js', array(), false, true );
 
