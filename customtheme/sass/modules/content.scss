@@ -3,10 +3,10 @@
   min-height: 90vh;
 }
 
-#primary {
-  img {
-    max-width: 100%;
-    height: auto;
+#main {
+  ul, li {
+    list-style-position: inside;
+    list-style-type: disc;
   }
   p {
     margin-bottom: 15px;
