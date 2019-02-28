@@ -36,7 +36,7 @@
   }
 }
 
-@mixin bgOverlay {
+@mixin overlay {
   position: relative;
   z-index: 1;
   &::before {
