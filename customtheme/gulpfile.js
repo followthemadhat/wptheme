@@ -61,7 +61,7 @@ gulp.task('images', function() {
   return gulp.src('img/**/*')
     .pipe(plumber())
     .pipe(imagemin())
-    .pipe(gulp.dest('../'+themeName+'-build'));
+    .pipe(gulp.dest('../'+themeName+'-build/img/'));
 });
 
 gulp.task('build', ['clean', 'images'], function() {
