@@ -68,6 +68,7 @@ gulp.task('build', ['clean', 'images'], function() {
 
   gulp.src(['./**/*',
   // exludes
+  '!./img/**',
   '!./sass',
   '!./sass/**',
   '!./libs',
