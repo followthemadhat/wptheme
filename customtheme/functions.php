@@ -225,3 +225,9 @@ add_filter('comment_form_default_fields','crunchify_disable_comment_url');
 
 // Hiding Gravity form top labels
 add_filter( 'gform_enable_field_label_visibility_settings', '__return_true' );
+
+// Removing margin-top from HTML admin bar when logged in
+function remove_admin_login_header() {
+    remove_action('wp_head', '_admin_bar_bump_cb');
+}
+add_action('get_header', 'remove_admin_login_header');
